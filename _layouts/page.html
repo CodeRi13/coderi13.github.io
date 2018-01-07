@@ -1,6 +1,8 @@
 ---
-layout: layout
+layout: default
 ---
-
-{% assign __ = site.data.languages[site.language] %}
-{% include page.html %}
+{% include nav.html %}
+<div class="page__container">
+    {{ content }}
+</div>
+{% include footer.html %}

@@ -1,0 +1,16 @@
+<div class="pagination">
+  <div class="pagination__left">
+    {% if page.next.url %}
+      <a class="pagination__left--link" href="{{ page.next.url | prepend: site.baseurl }}">←&nbsp;&nbsp;&nbsp;{{ page.next.title | slice: 0, 6 }}...</a>
+    {% else %}
+      <span class="pagination__left--link-disabled">←&nbsp;&nbsp;&nbsp;최근 글입니다.</span>
+    {% endif %}
+  </div>
+  <div class="pagination__right">
+    {% if page.previous.url %}
+      <a class="pagination__right--link" href="{{ page.previous.url | prepend: site.baseurl }}">{{ page.previous.title | slice: 0, 6 }}...&nbsp;&nbsp;&nbsp;→</a>
+    {% else %}
+      <span class="pagination__right--link-disabled">마지막 글입니다.&nbsp;&nbsp;&nbsp;→</span>
+    {% endif %}
+  </div>
+</div>

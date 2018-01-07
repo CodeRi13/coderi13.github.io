@@ -1,0 +1,42 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    padding-top: 72px;
+    margin: 0;
+
+    @media (max-width: $mobile-break) {
+        padding-top: 8px;
+    }
+}
+
+.page__container {
+	padding-top: 40px;
+    max-width: $max-width;
+    margin: auto;
+    min-height: calc(100vh - 168px);
+
+    @media (max-width: $mobile-break) {
+        min-height: calc(100vh - 104px);
+    }
+}
+
+.division {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 0px;
+}
+
+#disqus_thread {
+    margin-bottom: 56px;
+
+    @media (max-width: $max-width) {
+        margin: 0 16px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    word-break: keep-all;
+    word-wrap: break-word;
+}

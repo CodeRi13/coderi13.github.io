@@ -1,0 +1,20 @@
+<div class="pagination">
+  <div class="pagination__left">
+    {% if paginator.previous_page %}
+      {% if paginator.page == 2 %}
+        <a class="pagination__left--link" href="/">←&nbsp;&nbsp;&nbsp;전 페이지로</a>
+      {% else %}
+        <a class="pagination__left--link" href="{{ site.baseurl }}/page-{{paginator.previous_page}}/">←&nbsp;&nbsp;&nbsp;전 페이지로</a>
+      {% endif %}
+    {% else %}
+      <span class="pagination__left--link-disabled">←&nbsp;&nbsp;&nbsp;첫 페이지입니다.</span>
+    {% endif %}
+  </div>
+  <div class="pagination__right">
+    {% if paginator.next_page %}
+      <a class="pagination__right--link" href="{{ site.baseurl }}/page-{{paginator.next_page}}/">다음 페이지로&nbsp;&nbsp;&nbsp;→</a>
+    {% else %}
+      <span class="pagination__right--link-disabled">마지막 페이지입니다&nbsp;&nbsp;&nbsp;→</span>
+    {% endif %}
+  </div>
+</div>

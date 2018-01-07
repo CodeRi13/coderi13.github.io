@@ -1,0 +1,35 @@
+<title>{% if page.title %} {{ page.title }} •{% endif %} {{ site.title }}</title>
+
+<!-- etc -->
+<meta name="description" content="{{ page.summary }} {{ site.description.meta }}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<!-- rss -->
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ site.baseurl }}/feed.xml">
+
+<!-- icons -->
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/icon/icon@180.png">
+<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/icon/icon@96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/icon/icon@32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/icon/icon@192.png" sizes="192x192">
+
+<!-- font -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean" rel="stylesheet">
+
+<!-- style -->
+<link href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" rel="stylesheet" type="text/css">
+<link href="{{ site.baseurl }}/assets/style.css" rel="stylesheet">
+
+<!-- og tags -->
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} • {{ site.name }}{% else %}{{ site.name }}{% endif %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<meta property="og:description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:locale" content="{{ site.lang }}">
+{% if page.cover-image %}
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ site.resource }}{{ page.cover-image }}">
+{% else %}
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/og-image.jpg">
+{% endif %}

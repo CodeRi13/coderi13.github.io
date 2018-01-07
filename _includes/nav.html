@@ -1,0 +1,24 @@
+<nav class="nav">
+    <div class="nav__container">
+        <a class="nav__title" href="/"></a>
+        <ul class="nav__menu">
+            <li class="nav__menu__item"><a href="/category">Category</a></li>
+            <li class="nav__menu__item"><a href="https://github.com/atkodev">Github</a></li>
+            <li class="nav__menu__item nav__menu__item--type-toggle nav__menu__item--only-mobile">
+                <label for="drawer__controller">=</label>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<input id="drawer__controller" class="drawer__controller drawer__controller--state-check" type="checkbox">
+
+<div class="nav__drawer drawer">
+	<ul class="drawer__menu">
+        <li class="drawer__menu__item"><a href="/category">github</a></li>
+		<li class="drawer__menu__item"><a href="https://github.com/atkodev">github</a></li>
+    	<li class="drawer__menu__item">
+            <label class="drawer__button" for="drawer__controller">✗</label>
+        </li>
+	</ul>
+</div>

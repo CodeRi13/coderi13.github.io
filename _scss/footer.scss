@@ -1,0 +1,24 @@
+.footer {
+	height: 56px;
+
+	background-color: rgba(0, 0, 0, .04);
+	color: black;
+
+	&__container {
+		max-width: $max-width;
+		margin: auto;
+		padding: 0 16px;
+		height: 100%;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&--message {
+		font-size: 0.7rem;
+		font-weight: 500;
+		color: rgba(0, 0, 0, 0.7);
+		// letter-spacing: 1px;
+	}
+}

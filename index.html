@@ -1,3 +1,16 @@
 ---
-layout: index
+layout: page
+home: true
 ---
+
+<section>
+	{% for post in paginator.posts %}
+		<article class="article simple">
+			<h1 class="article--title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+			<span class="article--date"><strong style="color: #651FFF;">{{ post.subject }}</strong> — {{ post.date | date: site.date_format }}</span>
+			<p class="article--summery">{{ post.excerpt | strip_html }}&nbsp;&nbsp;<a href="{{ post.url | prepend: site.baseurl }}" class="article--summery--more">더읽기 →</a></p>
+		</article>
+	{% endfor %}
+</section>
+
+{% include pagination_site.html %}

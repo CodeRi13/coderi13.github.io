@@ -1,0 +1,14 @@
+// variables
+$max-width: 720px;
+$footer-height: 56px;
+$mobile-break: 640px;
+
+// import
+@import 'initialize.scss';
+@import 'nav.scss';
+@import 'post.scss';
+@import 'footer.scss';
+@import 'article.scss';
+@import 'highlight.scss';
+@import 'pagination.scss';
+@import 'not-found.scss';
