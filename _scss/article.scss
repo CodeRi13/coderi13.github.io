@@ -117,7 +117,7 @@
 
 	& > p {
 		margin: 24px 0;
-		font-size: 0.95rem;
+		font-size: 0.97rem;
 		color: rgba(0, 0, 0, 0.67);
 		font-weight: 500;
 		line-height: 1.64;
@@ -183,7 +183,7 @@
 
 	blockquote {
 		box-sizing: border-box;
-		padding: 16px;
+		padding: 1px 16px;
 		margin: 8px 0;
 		background-color: rgba(0, 0, 0, 0.04);
 		border-left: 6px solid rgba(0, 0, 0, 0.2);
@@ -236,11 +236,11 @@
 	}
 
 	code.highlighter-rouge {
-		border: 2px solid rgba(0, 0, 0, 0.2);
 		background-color: rgba(0, 0, 0, 0.04);
 		margin: 0 1px;
 		padding: 0 3px;
 		border-radius: 2px;
+        color: rgba(256, 20, 80, .8);
 	}
 
 	strong {
