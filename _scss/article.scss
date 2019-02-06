@@ -183,7 +183,7 @@
 
 	blockquote {
 		box-sizing: border-box;
-		padding: 1px 16px;
+		padding: 12px 16px;
 		margin: 8px 0;
 		background-color: rgba(0, 0, 0, 0.04);
 		border-left: 6px solid rgba(0, 0, 0, 0.2);
@@ -215,6 +215,7 @@
 		font-weight: 700;
 		margin-top: 48px;
 		margin-bottom: 16px;
+        color: rgba(0, 0, 0, .8);
 	}
 
 	h5 {
@@ -222,6 +223,7 @@
 		font-weight: 700;
 		margin-top: 48px;
 		margin-bottom: 16px;
+        color: rgba(0, 0, 0, .8);
 	}
 
 	h6 {
@@ -229,6 +231,7 @@
 		font-weight: 700;
 		margin-top: 48px;
 		margin-bottom: 16px;
+        color: rgba(0, 0, 0, .8);
 	}
 
 	h3 + p {
