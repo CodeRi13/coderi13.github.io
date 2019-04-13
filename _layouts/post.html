@@ -2,16 +2,17 @@
 layout: page
 ---
 <article class="article">
-	<h1 class="article--title">{{ page.title }}</h1>
-    <span class="article--date"><strong style="color: #651FFF;">{{ page.subject }}</strong> — {{ page.date | date: site.date_format }}</span>
-    {% if page.warning %}<p class="article--warning">{{ page.warning }}</p>{% endif %}
-    {% if page.bug %}<p class="article--bug">{{ page.bug }}</p>{% endif %}
-    {% if page.info %}<p class="article--info">{{ page.info }}</p>{% endif %}
-    {% if page.cover-image %}
-        <p class="article--cover_image"><img src="{{ site.resource }}{{ page.cover-image }}"></p>
-    {% else %}
-        <div class="article--space"></div>
-    {% endif %}
+	<h1 class="article--title">{{ page.title }}{% if page.order %}<span class="article--series-order">, {{ page.order }}</span>{% endif %}</h1>
+  <span class="article--date"><strong style="color: #651FFF;">{{ page.subject }}</strong> — {{ page.date | date: site.date_format }}</span>
+  {% if page.warning %}<p class="article--warning">{{ page.warning }}</p>{% endif %}
+  {% if page.bug %}<p class="article--bug">{{ page.bug }}</p>{% endif %}
+  {% if page.info %}<p class="article--info">{{ page.info }}</p>{% endif %}
+  {% if page.cover-image %}
+      <p class="article--cover_image"><img src="{{ site.resource }}{{ page.cover-image }}"></p>
+  {% else %}
+      <div class="article--space"></div>
+  {% endif %}
+  {% if page.description %}<div class="margin-box"></div><span class="article--summery--des article--summery--des--ina">{{ page.description }} — </span>{% endif %}
 	{{ content }}
 	<p class="article--author">Written by {% if page.author %}{{ page.author }}{% else %}JuunKi Jin{% endif %}</p>
 </article>

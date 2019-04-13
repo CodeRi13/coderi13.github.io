@@ -6,9 +6,18 @@ home: true
 <section>
 	{% for post in paginator.posts %}
 		<article class="article simple">
-			<h1 class="article--title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
-			<span class="article--date"><strong style="color: #651FFF;">{{ post.subject }}</strong> — {{ post.date | date: site.date_format }}</span>
-			<p class="article--summery">{{ post.excerpt | strip_html }}&nbsp;&nbsp;<a href="{{ post.url | prepend: site.baseurl }}" class="article--summery--more">더읽기 →</a></p>
+			<h1 class="article--title">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          {{ post.title }}<!-- 
+       --><span class="article--series-order">{% if post.order %}, {{ post.order }}{% endif %}</span>
+        </a>
+      </h1>
+
+			<span class="article--date">
+        <strong style="color: #651FFF;">{{ post.subject }}</strong> — {{ post.date | date: site.date_format }}
+      </span>
+
+			<p class="article--summery">{% if post.description %}<span class="article--summery--des">{{ post.description }} — </span>{% endif %}{{ post.excerpt | strip_html }}&nbsp;&nbsp;<a href="{{ post.url | prepend: site.baseurl }}" class="article--summery--more">더읽기 →</a></p>
 		</article>
 	{% endfor %}
 </section>

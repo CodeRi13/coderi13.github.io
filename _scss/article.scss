@@ -36,6 +36,10 @@
 		}
 	}
 
+  &--series-order {
+    color: rgba(0, 0, 0, .2);
+  }
+
 	&--default {
 		background-color: rgba(0, 0, 0, 0.04);
 		margin: 24px 0 0 0 !important;
@@ -91,6 +95,14 @@
 			font-size: 800;
 			font-style: italic;
 		}
+
+    &--des {
+      color: rgba(0, 0, 0, .3);
+
+      &+p {
+        display: inline !important;
+      }
+    }
 	}
 
 	&--space {
@@ -287,4 +299,9 @@
 	.highlighter-rouge {
 		max-width: calc(100vw - 32px);
 	}
+}
+
+.margin-box {
+  display: block;
+  height: 24px;
 }
